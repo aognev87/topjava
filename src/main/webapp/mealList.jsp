@@ -11,6 +11,9 @@
 <body>
 
 <form id="addMealForm" method="post">
+
+    <h2>Add a new meal</h2>
+
     <table border="0.5" bgcolor="black">
         <tr style="background-color: white; color: black">
             <td>Date: </td>
@@ -62,8 +65,8 @@
                 <td>${item.localDateTime}</td>
                 <td>${item.description}</td>
                 <td>${item.calories}</td>
-                <td><button type="submit" name="update" value="${item.localDateTime}">Edit</button></td>
-                <td><button type="submit" name="delete" value="${item.localDateTime}">Delete</button></td>
+                <td><button type="submit" name="edit" value="${item.id}">Edit</button></td>
+                <td><button type="submit" name="delete" value="${item.id}">Delete</button></td>
             </form>
         </tr>
     </c:forEach>
