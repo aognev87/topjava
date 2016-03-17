@@ -13,7 +13,7 @@ import java.util.List;
  * GKislin
  * 15.06.2015.
  */
-@Repository
+
 public class MockUserRepositoryImpl implements UserRepository {
     private static final Logger LOG = LoggerFactory.getLogger(MockUserRepositoryImpl.class);
 
@@ -44,6 +44,11 @@ public class MockUserRepositoryImpl implements UserRepository {
     @Override
     public User getByEmail(String email) {
         LOG.info("getByEmail " + email);
+        return null;
+    }
+
+    @Override
+    public InMemoryUserRepositoryImpl.UserMealFilters getFilters(int id) {
         return null;
     }
 }

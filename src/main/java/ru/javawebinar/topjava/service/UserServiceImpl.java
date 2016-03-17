@@ -19,6 +19,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository repository;
 
+    public UserServiceImpl() {
+    }
+
     public User save(User user) {
         return repository.save(user);
     }
@@ -41,5 +44,9 @@ public class UserServiceImpl implements UserService {
 
     public void update(User user) {
         repository.save(user);
+    }
+
+    public UserRepository getRepository() {
+        return repository;
     }
 }
