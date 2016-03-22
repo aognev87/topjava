@@ -50,6 +50,12 @@ public class JdbcUserRepositoryImpl implements UserRepository {
                 .addValue("enabled", user.isEnabled())
                 .addValue("caloriesPerDay", user.getCaloriesPerDay());
 
+        List<User> users = jdbcTemplate.query("SELECT * FROM users WHERE email=?", ROW_MAPPER, user.getEmail());
+        User testEmailUser = null;
+        if ((testEmailUser = DataAccessUtils.singleResult(users)) != null) {
+            return testEmailUser;
+        }
+
         if (user.isNew()) {
             Number newKey = insertUser.executeAndReturnKey(map);
             user.setId(newKey.intValue());

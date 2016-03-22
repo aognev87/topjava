@@ -9,13 +9,13 @@ VALUES ('User', 'user@yandex.ru', 'password');
 INSERT INTO users (name, email, password)
 VALUES ('Admin', 'admin@gmail.com', 'admin');
 
-INSERT INTO meals (description, calories) VALUES
-  ('Завтрак', 500),
-  ('Обед', 1000),
-  ('Ужин', 500),
-  ('Завтрак', 1000),
-  ('Обед', 500),
-  ('Ужин', 510);
+INSERT INTO meals (datetime, description, calories) VALUES
+  ('2015-05-30 10:00', 'Завтрак', 500),
+  ('2015-05-30 13:00', 'Обед', 1000),
+  ('2015-05-30 20:00', 'Ужин', 500),
+  ('2015-05-31 10:00', 'Завтрак', 1000),
+  ('2015-05-31 13:00', 'Обед', 500),
+  ('2015-05-31 20:00', 'Ужин', 510);
 
 INSERT INTO user_roles (role, user_id) VALUES
   ('ROLE_USER', 100000),

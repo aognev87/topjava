@@ -32,3 +32,4 @@ CREATE TABLE meals
   description VARCHAR,
   calories    INTEGER NOT NULL
 );
+CREATE UNIQUE INDEX meal_unique_date_time_idx ON meals (dateTime);
